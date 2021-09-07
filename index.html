@@ -1,13 +1,152 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
-		<meta charset="utf-8"> 
-		<style>
-		
-		</style>
-	</head> 
-<body> 
+<!DOCTYPE html>
+<html lang="en">
 
-</body> 
-</html> 
+<head>
+	<title>Morgan Chapter8-9HandsOnExercise</title>
+	<meta charset="utf-8">
+	<style>
+		table {
+			margin: auto;
+			border: 5px solid #000;
+			border-spacing: 0;
+			background-color: purple;
+		}
+
+		td,
+		th {
+			padding: 0.5em;
+			border: .5px solid #000;
+		}
+
+		caption {
+			font-size: 1.2em;
+		}
+
+		#wrapper {
+			display: grid;
+			grid-template-columns: 250px auto;
+			grid-template-rows: 200px auto;
+		}
+
+		#Col1 {
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+
+		#Col2 {
+			grid-row: 2/3;
+			grid-column: 2/3;
+		}
+
+		#Col3 {
+			grid-row: 2/3;
+			grid-column: 3/4;
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			display: inline;
+		}
+
+		@media only screen and (max-width: 768px) {
+			form {
+				columns: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Favorite Movie</h1>
+	<table>
+		<caption>Movie Info</caption>
+		<thead>
+			<tr>
+				<th id="1">Title of movie</th>
+				<th id="2">Avengers Endgame</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td headers="1">Director/Producer</td>
+				<td headers="2">The Russo Brothers</td>
+			</tr>
+			<tr>
+				<td headers="1">Leading Actors</td>
+				<td headers="2">Robert Downey Jr., Chris Evans, Chris Hemsworth, etc</td>
+			</tr>
+			<tr>
+				<td headers="1">Leading Actresses</td>
+				<td headers="2">Scarlette Johanson, Elizabeth Olson, Gwyneth Paltrow, etc</td>
+			</tr>
+			<tr>
+				<td headers="1">Rating</td>
+				<td headers="2">PG-13</td>
+			</tr>
+			<tr>
+				<td headers="1">Description</td>
+				<td headers="2">After their heartbreaking loss to Thanos in Infinity War, the Avengers pull off a mindboggling "Time Heist" to get the Infinity Stones from the past and bring everybody back.</td>
+			</tr>
+			<tr>
+				<td headers="1">Review About the Movie</td>
+				<td headers="2"><a href="https://www.rogerebert.com/reviews/avengers-endgame-2019">Endgame Review</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<h1>Music Survey</h1>
+	<form method="post" action="http://webdevbasics.net/scripts/demo.php">
+		<div id="wrapper">
+			<fieldset id="Col1">
+				<legend>Info</legend>
+				<lable for="myName">Name:</label>
+					<input type="text" name="myName" id="myName" placeholder="Your first and last name">
+					<label for="myEmail">Email:</label>
+					<input type="text" name="myEmail" id="myEmail" placeholder="you@yourdomain.com">
+					<lable for="You">A little About You:</label>
+						<input type="text" name="You" id="You" placeholder="Tell us a little about yourself!" rows="3" cols="60">
+			</fieldset>
+
+			<fieldset id="Col2">
+				<legend>Genres</legend>
+				Select Favorite Genre:<br>
+				<input type="radio" name="myStatus" id="R" value="Rock">
+				Rock<br>
+				<input type="radio" name="myStatus" id="P" value="Pop">
+				Pop<br>
+				<input type="radio" name="myStatus" id="RA" value="Rap">
+				Rap<br>
+				<input type="radio" name="myStatus" id="RE" value="Reggae">
+				Reggae<br>
+				<input type="radio" name="myStatus" id="J" value="Jazz">
+				Jazz<br>
+
+				Select Artists:<br>
+				<input type="checkbox" name="myOrg" id="TDG" value="Three Days Grace">
+				Three Days Grace<br>
+				<input type="checkbox" name="myOrg" id="MB" value="Micheal Buble">
+				Micheal Buble<br>
+				<input type="checkbox" name="myOrg" id="DC" value="Doja Cat">
+				Doja Cat<br>
+				<input type="checkbox" name="myOrg" id="K" value="Kanye">
+				Kanye<br>
+				<input type="checkbox" name="myOrg" id="PEP" value="Pepper">
+				Pepper<br>
+			</fieldset>
+
+			<fieldset id="Col3">
+				<legend>Where</legend>
+				Where do you listen to music: <br>
+				<select size="3" name="Where" id="Where">
+					<option value="Home">Home</option>
+					<option value="Doing HW">Doing HW</option>
+					<option value="Car">Car</option>
+					<option value="Hanging with Friends">Hanging With Friends</option>
+				</select>
+				<input id="mySubmit" type="submit" value="Submit">
+				<input type="reset">
+			</fieldset>
+
+		</div>
+		By: Wyatt Morgan - s540549@nwmissouri.edu
+</body>
+
+</html>
